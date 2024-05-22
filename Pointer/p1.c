@@ -1,0 +1,1 @@
+// Write a program that declares an integer variable and a pointer to it. Assign a value and print it using the pointer.

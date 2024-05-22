@@ -1,0 +1,1 @@
+// Write a program to change the value of an integer variable using a pointer and the * operator
