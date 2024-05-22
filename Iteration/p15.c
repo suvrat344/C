@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-  int first,second,lcm,max,min,gcd,quotient,remainder;
+  int first,second,min,max;
 
   printf("Enter first number : ");
   scanf("%d",&first);
@@ -11,26 +11,18 @@ int main(){
   printf("Enter second number : ");
   scanf("%d",&second);
 
-  max = first > second ? first 
-                       : second;
-
   min = first < second ? first 
                        : second;
 
-  while(1){
-    quotient = max / min;
-    remainder = max % min;
-    
-    if(remainder == 0){
-      gcd = min;
+  max = first * second;
+
+  for (int i = min; i <= max; i++)
+  {
+    if(i % first == 0 && i % second == 0){
+      printf("LCM(%d,%d) = %d",first,second,i);
       break;
     }
-
-    max = min;
-    min = remainder;
   }
-
-  printf("LCM : %d",first * second / gcd);  
 
   return 0;
 }
