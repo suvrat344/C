@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void minmax(int *,int *,int *,int *);
+void min_max(int *,int *,int *,int *);
 
 int main(){
   int a,b,min,max;
@@ -13,14 +13,14 @@ int main(){
   printf("Enter second number : ");
   scanf("%d",&b);
 
-  minmax(&a,&b,&min,&max);
+  min_max(&a,&b,&min,&max);
   printf("MIN(%d,%d) = %d and MAX(%d,%d) = %d",a,b,min,a,b,max);
 
   return 0;
 }
 
 
-void minmax(int *a,int *b,int *min,int *max){
+void min_max(int *a,int *b,int *min,int *max){
   *max = *a > *b ? *a 
                  : *b;
   *min = *a < *b ? *a 
