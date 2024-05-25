@@ -1,0 +1,1 @@
+// Write a function that accepts a pointer to a Student structure with fields for id, name, year, gpa and modifies its grades.

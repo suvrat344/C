@@ -1,0 +1,1 @@
+// Initialize an array of Book structures with different data for each book using designated initializers

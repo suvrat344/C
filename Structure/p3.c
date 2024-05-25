@@ -1,0 +1,1 @@
+// Define a Car structure with fields for make, model, year, and color.
