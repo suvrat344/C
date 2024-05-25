@@ -1,0 +1,1 @@
+// Write a program that takes user input and writes it to a file, ensuring each entry is on a new line.
