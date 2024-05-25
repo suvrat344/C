@@ -1,0 +1,1 @@
+// Create an array using calloc and fill it with random numbers, then use realloc to shrink the array size by half and print the remaining numbers
