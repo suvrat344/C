@@ -26,7 +26,7 @@ int isPallindrome(int *arr,int size){
   int isPallindrome=1;
   for(int i = 0; i < size / 2; i++)
   {
-    if(*(arr + i) != *(arr + size -i - 1)){
+    if(*(arr + i) != *(arr + size - i - 1)){
       isPallindrome = 0;
       break;
     }

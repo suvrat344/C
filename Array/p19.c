@@ -5,26 +5,16 @@
 void merged_array(int arr1[],int arr2[],int size1,int size2,int merged_arr[]){
   int i=0,j=0,k=0;
 
-  while (i < size1 && j < size2)
+  while (k < size1 + size2)
   {
-    if(arr1[i] < arr2[j]){
+    if(j == size2 || (i < size1 && arr1[i] < arr2[j])){
       merged_arr[k++] = arr1[i++];
     }
     else{
       merged_arr[k++] = arr2[j++];
     }
   }
-  
-  while(i < size1){
-    merged_arr[k++] = arr1[i++];
-  }
-
-  while(j < size2){
-    merged_arr[k++] = arr2[j++];
-  }
-  
 }
-
 
 
 int main(){
