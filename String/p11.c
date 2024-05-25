@@ -1,0 +1,1 @@
+// Read a line of text from the user using fgets and then print it using puts.
