@@ -4,7 +4,7 @@
 #include <string.h>
 
 int main(){
-  char password[] = "adefg",text[100];
+  const char password[] = "adefg",text[100];
 
   printf("Enter password : ");
   fgets(text,sizeof(text),stdin);

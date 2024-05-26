@@ -11,16 +11,11 @@ int main(){
 
   int length = strlen(text);
 
-  if(length > 0 && text[length - 1] == '\n'){
-    text[length - 1] = '\0';
-  }
-
-// printf("%d",strlen(text));
-  for (int i = 0; i < strlen(text) / 2; i++)
+  for (int i = 0; i < length / 2; i++)
   {
     temp = text[i];
-    text[i] = text[strlen(text) - i - 1];
-    text[strlen(text) - i - 1] = temp;
+    text[i] = text[length - i - 1];
+    text[length - i - 1] = temp;
   }
   
   puts(text);
