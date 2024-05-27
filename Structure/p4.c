@@ -11,33 +11,35 @@ struct Car
   char color[25];
 };
 
-void print_details(struct Car c1);
+
+typedef struct Car Cars;
+void print_details(Cars *,int);
 
 
 int main(){
-  struct Car cars[3] =
+  Cars c[3] =
             {
-             {"abc","def","2024","red"},
-             {"abc","def","2023","blue"},
-             {"abc","def","2022","black"}
+             {"Ford","Aspire","2022","Red"},
+             {"Tata","Alto","2023","Blue"},
+             {"Swift","Desire","2022","Black"}
             };
+  Cars *car_ptr = c;
 
-
-  for (int i = 0; i < 3; i++)
-  {
-
-    print_details(cars[i]);
-  }
-  
+  print_details(car_ptr,3);
 
   return 0;
 }
 
 
-void print_details(struct Car c1){
-  printf("Car Making Company : %s\n",c1.make);
-  printf("Car Model : %s\n",c1.model);
-  printf("Car Making Year : %s\n",c1.year);
-  printf("Car Color : %s\n",c1.color);
-  printf("---------xxxxxxxxxxxxxx------------\n");
+void print_details(Cars *c,int size){
+
+  for (int i = 0; i < size; i++)
+  {
+    printf("Car Making Company : %s\n",c->make);
+    printf("Car Model : %s\n",c->model);
+    printf("Car Making Year : %s\n",c->year);
+    printf("Car Color : %s\n",c->color);
+    printf("---------xxxxxxxxxxxxxx------------\n");
+  }
+  
 }

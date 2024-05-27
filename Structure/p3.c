@@ -10,14 +10,17 @@ struct Car
   char color[25];
 };
 
+typedef struct Car car;
+
+
 
 int main(){
-  struct Car c1 = {"abc","def","2024","red"};
+  car ford = {"Ford","Aspire","2024","Red"};
 
-  printf("Car Making Company is %s.\n",c1.make);
-  printf("Car Model is %s.\n",c1.model);
-  printf("Car Making Year is %s.\n",c1.year);
-  printf("Car Color is %s.",c1.color);
+  printf("Car Making Company is %s.\n",ford.make);
+  printf("Car Model is %s.\n",ford.model);
+  printf("Car Making Year is %s.\n",ford.year);
+  printf("Car Color is %s.",ford.color);
 
   return 0;
 }

@@ -1,21 +1,21 @@
-// Write a function that accepts a pointer to a Student structure with fields for id, name, year, gpa and modifies its grades.
+// Write a function that accepts a pointer to a Student structure with fields for id, name, year, gpa and its grades.
 
 #include <stdio.h>
 
-struct Student
+typedef struct
 {
   int id;
   char name[25];
-  char year[4];
+  char year[5];
   float gpa;
   char grade;
+} Student;
 
-};
 
-void print_details(struct Student *,int);
+void print_details(Student *,int);
 
 int main(){
-  struct Student stu[5]=
+  Student stu[5]=
     {
       {1,"Ram","2024",7.5,'C'},
       {2,"Mohan","2023",9,'A'},
@@ -24,7 +24,7 @@ int main(){
       {5,"Nisha","2022",6,'E'}
     };
 
-  struct Student *student_ptr = stu;
+  Student *student_ptr = stu;
 
   print_details(student_ptr,5);
 
@@ -33,7 +33,7 @@ int main(){
 
 
 
-void print_details(struct Student *stu,int size){
+void print_details(Student *stu,int size){
   for (int i = 0; i < size; i++)
   {
     printf("Id : %d\n",(stu + i)->id);
