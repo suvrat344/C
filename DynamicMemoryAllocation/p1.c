@@ -48,10 +48,18 @@ int main(){
   scanf("%d",&n);
 
   car *Cars = (car *)malloc(n*sizeof(car));
-  
-  input_car(Cars,n);
+  if (Cars == NULL)
+  {
+    printf("Memory not allocated");
+  }
+  else
+  {
+    input_car(Cars,n);
+  }
 
   display(Cars,n);
+
+  free(Cars);
 
   return 0;
 }
