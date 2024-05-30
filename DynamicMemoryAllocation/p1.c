@@ -4,16 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Car
+typedef struct 
 {
   char make[50];
   char model[50];
   char year[6];
   char color[25];
-} car;
+} Car;
 
 
-void input_car(car *Cars,int size){
+void input_car(Car *Cars,int size){
   for (int i = 0; i < size; i++)
   {
     printf("Enter name of company : ");
@@ -29,7 +29,7 @@ void input_car(car *Cars,int size){
 }
 
 
-void display(car *Cars,int size){
+void display(Car *Cars,int size){
   for (int i = 0; i < size; i++)
   {
     printf("Name of Company : %s\n",(Cars+i)->make);
@@ -47,7 +47,7 @@ int main(){
   printf("Enter no of car you want to enter : ");
   scanf("%d",&n);
 
-  car *Cars = (car *)malloc(n*sizeof(car));
+  Car *Cars = (Car *)malloc(n*sizeof(Car));
   if (Cars == NULL)
   {
     printf("Memory not allocated");
