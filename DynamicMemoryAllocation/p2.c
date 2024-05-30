@@ -53,5 +53,8 @@ int main(){
   
   print_array(arr,n);
 
+  free(arr);
+  arr = NULL;
+
   return 0;
 }

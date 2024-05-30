@@ -60,6 +60,7 @@ int main(){
   display(Cars,n);
 
   free(Cars);
+  Cars = NULL;
 
   return 0;
 }

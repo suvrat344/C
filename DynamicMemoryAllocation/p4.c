@@ -48,7 +48,9 @@ int main(){
   }
 
   display(p,n);
+  
   free(p);
+  p = NULL;
 
   return 0;
 }
