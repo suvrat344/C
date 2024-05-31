@@ -19,6 +19,7 @@ int main(){
   printf("%d",sum);
 
   fclose(fptr);
+  fptr = NULL;
 
   return 0;
 }

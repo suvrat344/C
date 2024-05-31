@@ -3,7 +3,12 @@
 #include <stdio.h>
 
 int main(){
-  FILE *fptr = fopen("demo.txt","r");
+  char filename[100];
+
+  printf("Enter file name : ");
+  scanf("%s",filename);
+
+  FILE *fptr = fopen(filename,"r");
 
   if(fptr == NULL)
   {
@@ -15,6 +20,7 @@ int main(){
   }
 
   fclose(fptr);
+  fptr = NULL;
 
   return 0;
 }

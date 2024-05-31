@@ -22,6 +22,7 @@ int main(){
   }
   
   fclose(fptr);
+  fptr = NULL;
 
   return 0;
 }

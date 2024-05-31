@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-  int ch;
+  char ch;
   FILE *fptr = fopen("demo.txt","r"),*fptr1 = fopen("demo1.txt","w");
 
   if(fptr == NULL){
@@ -13,11 +13,12 @@ int main(){
 
   while((ch = fgetc(fptr)) != EOF)
   {
-    putc(ch,fptr1);
+    fputc(ch,fptr1);
   }
 
   fclose(fptr);
   fclose(fptr1);
+  fptr,fptr1 = NULL;
   
   return 0;
 }

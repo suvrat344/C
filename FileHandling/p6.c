@@ -12,21 +12,18 @@ int main()
     return 1;
   }
 
-  // Reading content of file
-  int ch;
+  char ch;
 
   while((ch = fgetc(fptr)) != EOF)
   {
     printf("%c",ch);
   }
 
-  // Writing Content to the file
-  char s[25] = "line3",s1="line4\n";
-  fprintf(fptr,"%s\n",s);
-  fputs(fptr,s1);
-  fwrite(fptr,s1);
+  fseek(fptr,0,SEEK_END);
+  fputs("This message was written by program.",fptr);
 
   fclose(fptr);
+  fptr = NULL;
 
   return 0;
 }

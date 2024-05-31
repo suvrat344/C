@@ -19,6 +19,7 @@ int main(){
   fputs(name,fptr);
 
   fclose(fptr);
-
+  fptr = NULL;
+  
   return 0;
 }
