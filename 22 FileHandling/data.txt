@@ -1,6 +1,0 @@
-Hello World !!
-line1
-line2
-line2
-line3
-This message was written by program.
